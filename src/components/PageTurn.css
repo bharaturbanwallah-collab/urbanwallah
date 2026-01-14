@@ -1,0 +1,78 @@
+.page-turn-stage {
+  position: fixed;
+  inset: 0;
+  perspective: 2000px;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* ===============================
+   SHARED PAGE STYLES
+================================ */
+.page {
+  position: absolute;
+  inset: 0;
+
+  /* Match stage background perfectly */
+  background-color: #0b1220;
+  background-image:
+    linear-gradient(
+      rgba(11, 18, 32, 0.832),
+      rgba(11, 18, 32, 0.819)
+    ),
+    url("/assets/loading.png");
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+/* ===============================
+   BACK PAGE (STATIC)
+================================ */
+.page.back {
+  transform: rotateY(0deg);
+  z-index: 1;
+}
+
+/* ===============================
+   FRONT PAGE (TURNING)
+================================ */
+.page.front {
+  transform-origin: right center;
+  z-index: 2;
+
+  /* Slight highlight for realism */
+  box-shadow: inset -1px 0 0 rgba(255,255,255,0.05);
+}
+
+/* ===============================
+   PAGE TURN ANIMATION
+================================ */
+.page.front.turn {
+  animation: pageFlip 0.9s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+
+/* ===============================
+   REALISTIC PAGE FLIP
+================================ */
+@keyframes pageFlip {
+  0% {
+    transform: rotateY(0deg);
+    box-shadow: inset -1px 0 0 rgba(255,255,255,0.05);
+  }
+
+  50% {
+    box-shadow:
+      -40px 0 80px rgba(0,0,0,0.45),
+      inset -6px 0 20px rgba(0,0,0,0.35);
+  }
+
+  100% {
+    transform: rotateY(-180deg);
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,7 @@
+.page-scroll {
+    height: calc(100vh - 72px);
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 80px;
+  }
+  

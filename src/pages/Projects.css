@@ -1,0 +1,196 @@
+/* ===============================
+   GLOBAL SAFETY (IMPORTANT)
+================================ */
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #070b1a;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* ===============================
+     SECTION BASE
+  ================================ */
+  .projects-section {
+    min-height: calc(100vh - 60px); /* footer height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 60px; /* prevent overlap with footer */
+    background: radial-gradient(
+        circle at top,
+        rgba(65, 105, 225, 0.15),
+        transparent 60%
+      ),
+      linear-gradient(
+        180deg,
+        #0f1c3f 0%,
+        #0a1025 55%,
+        #070b1a 100%
+      );
+  }
+  
+  /* ===============================
+     CONTENT WRAPPER
+  ================================ */
+  .projects-content {
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* ===============================
+     TOP IMAGE
+  ================================ */
+  .image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.2rem;
+  }
+  
+  .top-image {
+    width: 500px;
+    max-width: 85%;
+    animation: float 4s ease-in-out infinite;
+    filter: drop-shadow(0 18px 35px rgba(0, 0, 0, 0.45));
+  }
+  
+  /* Floating animation */
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-14px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* ===============================
+     PROJECT BLOCKS
+  ================================ */
+  .projects-blocks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.2rem;
+    width: 100%;
+  }
+  
+  /* Common block style */
+  .block {
+    width: 100%;
+    min-width: 250px;     
+    max-width: 300px;   /* ⬅️ wider buttons */
+    height: 56px;            /* ⬅️ taller buttons */
+    margin: 0 auto; 
+    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  
+  /* Text clarity */
+  .block h2 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+  
+  
+  /* Shine hover effect */
+  .block::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    );
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+  
+  .block:hover::before {
+    opacity: 1;
+  }
+  
+  /* Yellow block */
+  .social-media {
+    background: linear-gradient(135deg, #f9d44b, #e3bb2f);
+  }
+  
+  .social-media h2 {
+    color: #1b1b1b;
+  }
+  
+  /* Blue block */
+  .ecommerce {
+    background: linear-gradient(135deg, #4169e1, #1f3c88);
+  }
+  
+  .ecommerce h2 {
+    color: #ffffff;
+  }
+  
+  /* ===============================
+     FIXED FOOTER
+  ================================ */
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #1f3c88;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    z-index: 1000;
+  }
+  
+  /* ===============================
+     MOBILE VIEW (CRITICAL)
+  ================================ */
+  @media (max-width: 768px) {
+    .projects-section {
+      padding-top: 1.5rem;
+    }
+  
+    .top-image {
+      width: 220px;
+    }
+  
+    .projects-blocks {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.9rem;
+      }
+    
+      .block {
+        max-width: 260px;   /* balanced mobile width */
+        height: 48px;
+      }
+    
+      .block h2 {
+        font-size: 0.9rem;
+      }
+  }  

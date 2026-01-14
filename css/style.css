@@ -1,0 +1,107 @@
+
+:root{
+  --brand-cyan: #31c7f0;
+  --brand-cyan-dark: #0aa3d6;
+  --nav-height: 72px;
+  --text-dark: #071127;
+  --muted: #5b6b7a;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--text-dark);
+  background:#fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+
+/* Header */
+.site-header{
+  position:fixed;
+  top:0;left:0;right:0;
+  height:var(--nav-height);
+  display:flex;
+  align-items:center;
+  z-index:1000;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.35));
+  border-bottom: 1px solid rgba(10,10,10,0.04);
+}
+.container{width:min(1180px,94%);margin:0 auto}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;cursor:pointer;transition:transform .35s ease}
+.brand .logo{width:36px;height:36px;filter: drop-shadow(0 2px 0 rgba(0,0,0,0.06));}
+.brand-title{font-weight:700;font-size:1.25rem;color:var(--text-dark)}
+
+/* Nav */
+.main-nav ul{display:flex;gap:20px;list-style:none;align-items:center}
+.main-nav a{font-weight:600;text-decoration:none;color:var(--muted);padding:8px 10px;border-radius:8px;transition:color .25s, transform .18s}
+.main-nav a:hover{color:var(--text-dark);transform:translateY(-3px)}
+.burger{display:none;background:none;border:none;font-size:22px;cursor:pointer}
+
+/* Hero */
+.hero{
+  min-height:100vh;
+  padding-top:calc(var(--nav-height) + 36px);
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  background: linear-gradient(180deg, var(--brand-cyan), var(--brand-cyan-dark));
+  color:white;
+}
+.hero-bg-blob{
+  position:absolute;right:-10%;top:-10%;width:60vmax;height:60vmax;background:radial-gradient(circle at 30% 30%, rgba(255,255,255,0.08), rgba(255,255,255,0));
+  transform:rotate(25deg);
+  transition:transform .6s ease;
+  filter: blur(24px);
+}
+.hero-inner{display:flex;gap:40px;align-items:center;padding:80px 0}
+.hero-left{flex:1}
+.hero-right{flex:0.9;display:flex;justify-content:center;align-items:center}
+.logo-large{width:120px;display:block;margin-bottom:20px;filter: drop-shadow(0 6px 0 rgba(0,0,0,0.12))}
+.hero-title{font-size:2.6rem;line-height:1.02;margin-bottom:12px;letter-spacing:-1px}
+.hero-sub{opacity:.92;margin-bottom:18px;color:rgba(255,255,255,0.95)}
+
+/* hero-card */
+.hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.06));padding:28px;border-radius:14px;backdrop-filter: blur(6px);max-width:420px;transform:translateY(30px);opacity:0;transition:all .6s cubic-bezier(.2,.9,.3,1);border:1px solid rgba(255,255,255,0.08)}
+
+/* reveal when in-view */
+.in-view{transform:none;opacity:1}
+
+/* panels */
+.panel{padding:120px 0;background:white;transition:transform .6s, opacity .6s;opacity:0;transform:translateY(24px)}
+.panel.alt{background:linear-gradient(180deg, #f5fbff, #f0faff)}
+.panel .container h2{color:var(--brand-cyan-dark);margin-bottom:16px;font-size:1.8rem}
+.panel .container p, .panel .container ul{color:var(--muted);line-height:1.7;font-size:1.02rem}
+
+/* contact form */
+.contact-form{display:flex;flex-direction:column;gap:12px;margin-top:12px;max-width:520px}
+.contact-form input,.contact-form textarea{padding:12px;border-radius:10px;border:1px solid rgba(10,10,10,0.06)}
+.contact-form button{align-self:flex-start}
+
+/* cta */
+.cta{background:var(--text-dark);color:white;padding:12px 20px;border-radius:999px;border:none;font-weight:700;cursor:pointer;transition:transform .18s}
+.cta:hover{transform:translateY(-4px)}
+
+/* footer */
+footer{padding:36px 0;text-align:center;background:#061a3b;color:white}
+
+
+/* subtle floating animation */
+.floating{animation:float 6s ease-in-out infinite}
+@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+
+/* pointer interaction (tilt) */
+.logo-large.tilt{transform:rotate(-6deg) scale(1.02)}
+
+/* menu active underline */
+.main-nav a.active{color:var(--brand-cyan-dark);box-shadow:inset 0 -3px 0 rgba(255,255,255,0.06)}
+
+/* reveal helper when observed */
+.revealed{opacity:1;transform:none;transition:all .6s cubic-bezier(.2,.9,.3,1)}
+
+

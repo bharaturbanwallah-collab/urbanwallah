@@ -1,0 +1,120 @@
+/* ===============================
+   ABOUT SECTION BASE
+================================ */
+.about-panel {
+  position: relative;
+  padding: 90px 20px;
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+/* ===============================
+   BACKGROUND IMAGE + OVERLAY
+================================ */
+.about-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(
+      rgba(248, 250, 252, 0.812),
+      rgba(248, 250, 252, 0.805)
+    ),
+    url("/assets/about-bg.png"); /* <-- your image */
+  background-size:contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* ===============================
+   CONTENT CONTAINER
+================================ */
+.about-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* ===============================
+   HEADING
+================================ */
+.about-container h2 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #0f172a;
+  margin-bottom: 28px;
+  letter-spacing: -0.5px;
+}
+
+/* ===============================
+   PARAGRAPHS
+================================ */
+.about-container p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.8;
+  color: #334155;
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   ANIMATION
+================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   TABLET VIEW
+================================ */
+@media (max-width: 1024px) {
+  .about-container {
+    text-align: center;
+  }
+
+  .about-container h2 {
+    font-size: 2.4rem;
+  }
+
+  .about-container p {
+    font-size: 1.05rem;
+  }
+}
+
+/* ===============================
+   MOBILE VIEW (NO BACKGROUND)
+================================ */
+@media (max-width: 600px) {
+  .about-panel {
+    padding: 80px 16px;
+    background: #f8fafc;
+  }
+
+  .about-panel::before {
+    display: none; /* remove background image */
+  }
+
+  .about-container h2 {
+    font-size: 2rem;
+  }
+
+  .about-container p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}

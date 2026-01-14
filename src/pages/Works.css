@@ -1,0 +1,174 @@
+/* ===== WORKS SECTION ===== */
+.works-panel {
+  padding: 80px 0;
+  background: #f1f5f9;
+}
+
+/* ===== CAROUSEL CONTAINER ===== */
+.works-carousel-container {
+  width: 80%;
+  height: 70vh;
+  margin: 3% auto;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ===== CAROUSEL TRACK ===== */
+.works-carousel-track {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  animation: circularSlide 14s ease-in-out infinite;
+}
+
+/* ===== CAROUSEL ITEM ===== */
+.works-carousel-item {
+  height: calc((70vh - 15vh) / 2);
+  border-radius: 22px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0b1220, #f8f8fa);
+  padding: 48px 56px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ===== IMAGE LAYER (RIGHT SIDE) ===== */
+.works-carousel-item::after {
+  content: "";
+  position: absolute;
+  margin-right:2.8rem;
+  inset: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+  opacity: 0.95;
+}
+
+/* ===== GRADIENT OVERLAY ===== */
+.works-carousel-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(15, 23, 42, 0.96) 0%,
+    rgba(15, 23, 42, 0.9) 45%,
+    rgba(15, 23, 42, 0.707) 70%,
+    rgba(15, 23, 42, 0.568) 100%
+  );
+  z-index: 1;
+}
+
+/* ===== HOVER EFFECT ===== */
+.works-carousel-item:hover {
+  transform: translateY(-6px) scale(1.015);
+  /* box-shadow: 0 26px 55px rgba(0, 0, 0, 0.28); */
+}
+
+/* ===== CONTENT ===== */
+.works-carousel-item h2,
+.works-carousel-item p {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  max-width: 520px;
+}
+
+.works-carousel-item h2 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 18px;
+  letter-spacing: -0.01em;
+}
+
+.works-carousel-item p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #e2e8f0;
+}
+
+/* ===== BACKGROUND IMAGES ===== */
+.bg-one::after {
+  background-image: url("/assets/work-laptop.png");
+}
+
+.bg-two::after {
+  background-image: url("/assets/work-xerox.png");
+}
+
+.bg-three::after {
+  background-image: url("/assets/work-drawing.png");
+}
+
+.bg-four::after {
+  background-image: url("/assets/work-team.png");
+}
+
+/* ===== ANIMATION ===== */
+@keyframes circularSlide {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .works-carousel-container {
+    width: 90%;
+    height: 68vh;
+  }
+
+  .works-carousel-item {
+    padding: 40px 44px;
+  }
+
+  .works-carousel-item h2 {
+    font-size: 1.9rem;
+  }
+
+  .works-carousel-item p {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .works-carousel-container {
+    height: auto;
+    overflow: visible;
+  }
+
+  .works-carousel-track {
+    animation: none;
+  }
+
+  .works-carousel-item {
+    height: auto;
+    margin-bottom: 28px;
+    padding: 32px 28px;
+  }
+
+  .works-carousel-item::after {
+    background-position: center bottom;
+    background-size: cover;
+    opacity: 0.25;
+  }
+
+  .works-carousel-item::before {
+    background: rgba(15, 23, 42, 0.9);
+  }
+
+  .works-carousel-item h2 {
+    font-size: 1.5rem;
+  }
+
+  .works-carousel-item p {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+}

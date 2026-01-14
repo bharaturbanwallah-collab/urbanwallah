@@ -1,0 +1,116 @@
+.scroll-down-indicator {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid rgba(30, 64, 175, 0.2);
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(30, 64, 175, 0.25);
+  backdrop-filter: blur(10px);
+  animation: floatDown 2s ease-in-out infinite;
+}
+
+.scroll-up-indicator {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid rgba(30, 64, 175, 0.2);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(30, 64, 175, 0.25);
+  backdrop-filter: blur(10px);
+  animation: floatUp 2s ease-in-out infinite;
+}
+
+.scroll-down-indicator:hover,
+.scroll-up-indicator:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateX(-50%) translateY(-5px);
+  box-shadow: 0 6px 25px rgba(30, 64, 175, 0.35);
+}
+
+.scroll-down-indicator svg,
+.scroll-up-indicator svg {
+  color: var(--brand-blue);
+  animation: bounceDown 1.5s ease-in-out infinite;
+}
+
+.scroll-up-indicator svg {
+  width: 28px;
+  height: 36px;
+  animation: bounceUp 1.5s ease-in-out infinite;
+}
+
+@keyframes floatUp {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+@keyframes floatDown {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px);
+  }
+}
+
+@keyframes bounceDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes bounceUp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-down-indicator {
+    width: 50px;
+    height: 50px;
+    bottom: 30px;
+  }
+  
+  .scroll-up-indicator {
+    width: 65px;
+    height: 65px;
+    bottom: 30px;
+  }
+  
+  .scroll-up-indicator svg {
+    width: 26px;
+    height: 34px;
+  }
+}
+
