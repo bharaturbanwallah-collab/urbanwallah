@@ -1,6 +1,7 @@
 /* ===== PAGE LAYOUT ===== */
 .mission-page {
   max-height: 90vh;
+  margin-bottom:2rem;
   padding-top: calc(var(--nav-height) + 15px);
   display: flex;
   flex-direction: column;
@@ -36,6 +37,7 @@
 /* ===== CAROUSEL BOX ===== */
 .carousel-box {
   position: relative;
+  height:22vh;
   width: 90%; 
   max-width: 800px; 
   padding: 2rem 2rem; 
