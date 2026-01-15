@@ -1,8 +1,9 @@
 /* ===== PAGE LAYOUT ===== */
 .mission-page {
-  max-height: 90vh;
-  margin-bottom:2rem;
+  min-height: 100vh;
+  margin-bottom: 2rem;
   padding-top: calc(var(--nav-height) + 15px);
+  padding-bottom: 140px; /* IMPORTANT: allows scroll to see full image */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +12,6 @@
 
 /* ===== CAROUSEL ===== */
 .mission-carousel {
-  height: 80vh;
   width: 100%;
   max-width: 1200px;
   margin: 20px auto 48px;
@@ -37,7 +37,6 @@
 /* ===== CAROUSEL BOX ===== */
 .carousel-box {
   position: relative;
-  height:22vh;
   width: 90%; 
   max-width: 800px; 
   padding: 2rem 2rem; 
@@ -107,7 +106,7 @@
 /* ===== BOTTOM CONTENT ===== */
 .mission-bottom {
   display: flex;
-  margin-top: -30px;
+  margin-top: 24px;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -176,10 +175,6 @@
   }
   .carousel-box p {
       font-size: 1.1rem;
-  }
-
-  .mission-carousel{
-    padding-top: 0px;
   }
   .mission-bottom {
       flex-direction: column;

@@ -435,6 +435,7 @@ footer p {
     transition: transform 0.38s cubic-bezier(.2, .9, .3, 1);
     z-index: 999;
     box-shadow: -12px 0 28px rgba(0, 0, 0, 0.08);
+    overflow-y: auto;
   }
 
   .main-nav.active {
@@ -461,7 +462,10 @@ footer p {
     text-decoration: none;
     color: var(--text-muted);
   }
-
+  
+  .main-nav ul li:last-child{
+    padding-bottom: 20px;
+  }
   /* Active link: only text color change, no underline */
   .main-nav a.active {
     color: var(--brand-blue);
