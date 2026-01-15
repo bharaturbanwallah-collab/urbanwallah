@@ -34,16 +34,21 @@
   }
   
   /* ===== CAROUSEL BOX ===== */
+  
+
   .carousel-box {
     position: relative;
-    width: 80%;
-    padding: 48px 72px; /* extra space for arrows */
+    width: 90%; /* take most of the carousel width */
+    max-width: 700px; /* prevent it from getting too wide on large screens */
+    padding: 3rem 2rem; /* relative padding */
     border-radius: 22px;
     background: #1e3a8a;
     color: #ffffff;
     text-align: center;
+    box-sizing: border-box; /* include padding in width */
+    overflow-wrap: break-word; /* prevent long words from breaking layout */
   }
-  
+
   /* Text */
   .carousel-box h3 {
     font-size: 2rem;
@@ -167,9 +172,7 @@
   
   @media (max-width: 768px) {
     
-    .carousel-box{
-      min-height: 150px
-    }
+  
     .mission-bottom {
       flex-direction: column;
     }
