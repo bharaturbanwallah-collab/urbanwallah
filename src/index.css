@@ -430,7 +430,7 @@ footer p {
     justify-content: flex-start;
     transform: translateX(100%);
     pointer-events: none;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.777), rgb(255, 255, 255));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
     transition: transform 0.38s cubic-bezier(.2, .9, .3, 1);
     z-index: 999;
     box-shadow: -12px 0 28px rgba(0, 0, 0, 0.08);

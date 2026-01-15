@@ -25,49 +25,56 @@ const Contact = () => {
     <section className="contact-section" id="contact">
       <div className="contact-container">
         
-        {/* Left Content */}
+        <div className="contact-image">
+          <img src="/assets/help-desk.png" alt="Contact illustration" />
+        </div>
+
         <div className="contact-content">
           <h2>Contact Us</h2>
           <p>
             Collaborate with us — build enduring platforms and redefine the
             future of digital innovation.
           </p>
-
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Tell us about your idea"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            />
-            <button type="submit" className="reach-out">
-              Reach Out
-            </button>
-          </form>
-        </div>
-
-        {/* Right Image */}
-        <div className="contact-image">
-          <img src="/assets/help-desk.png" alt="Contact illustration" />
+          
         </div>
       </div>
+
+
+      {/* Info Blocks */}
+      <div className="contact-info">
+            
+        {/* Address */}
+       
+
+        {/* Social */}
+        <div className="info-block">
+          <h4>🌐 Social</h4>
+          <p>
+            <a href="https://www.linkedin.com/company/104145392/admin/dashboard/" target="_blank" rel="noreferrer">
+              LinkedIn
+            </a>{" "}
+            |{" "}
+            <a href="https://www.instagram.com/urbanwallah?igsh=MXZ4dTU3NWc1ZXBwMA==" target="_blank" rel="noreferrer">
+              Instagram
+            </a>
+          </p>
+        </div>
+
+        {/* Phone */}
+        <div className="info-block">
+          <h4>📞 Phone</h4>
+          <p>+91 9567805030</p>
+        </div>
+
+        <div className="info-block">
+          <h4>📍 Address</h4>
+          <p>
+            34/1, Kannampalayam, Sulur,<br />
+            Coimbatore, Tamil Nadu – 641402
+          </p>
+        </div>
+      </div>
+          
     </section>
   );
 };

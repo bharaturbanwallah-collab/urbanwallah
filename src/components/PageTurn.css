@@ -13,7 +13,7 @@
   position: absolute;
   inset: 0;
   /* Match stage background perfectly */
-  background-color: #0b1220;
+  background-color: #060606;
   background-image:
     linear-gradient(
       rgba(11, 18, 32, 0.714),
