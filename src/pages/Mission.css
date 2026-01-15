@@ -10,10 +10,10 @@
 
 /* ===== CAROUSEL ===== */
 .mission-carousel {
-  height: 50vh;
+  height: 80vh;
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto 48px;
+  margin: 20px auto 48px;
   position: relative;
   overflow: hidden;
 }
@@ -141,7 +141,7 @@
 }
 
 .mission-image {
-  width: 50%;
+  width: 45%;
   max-width: 80%;
   animation: float 6s ease-in-out infinite;
 }

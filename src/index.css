@@ -391,12 +391,13 @@ body {
 
 /* Footer */
 footer {
-  position: relative;
+  position: fixed;
   bottom: 0;
   padding: 40px 0;
   text-align: center;
   background: var(--brand-blue-dark);
   color: white;
+  z-index: 888;
 }
 
 footer p {

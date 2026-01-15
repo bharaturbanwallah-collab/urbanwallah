@@ -30,7 +30,6 @@ const Contact = () => {
         </div>
 
         <div className="contact-content">
-          <h2>Contact Us</h2>
           <p>
             Collaborate with us — build enduring platforms and redefine the
             future of digital innovation.
