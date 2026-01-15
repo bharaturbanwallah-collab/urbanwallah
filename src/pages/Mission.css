@@ -84,11 +84,11 @@
 
 /* Arrow positioning */
 .carousel-arrow.prev {
-  left: -24px; /* move slightly outside the box for mobile */
+  left: 2%; /* move slightly outside the box for mobile */
 }
 
 .carousel-arrow.next {
-  right: -24px;
+  right: 2%;
 }
 
 /* Hover */
@@ -175,6 +175,10 @@
   .carousel-box p {
       font-size: 1.1rem;
   }
+
+  .mission-carousel{
+    padding-top: 0px;
+  }
   .mission-bottom {
       flex-direction: column;
   }
@@ -191,10 +195,10 @@
       font-size: 22px;
   }
   .carousel-arrow.prev {
-      left: -20px;
+      left:10px;
   }
   .carousel-arrow.next {
-      right: -20px;
+      right:10px;
   }
 }
 
@@ -210,9 +214,9 @@
       font-size: 20px;
   }
   .carousel-arrow.prev {
-      left: -16px;
+      left: 5px;
   }
   .carousel-arrow.next {
-      right: -16px;
+      right: 5px;
   }
 }
