@@ -10,7 +10,7 @@
   
   /* ===== CAROUSEL ===== */
   .mission-carousel {
-    height: 40vh;
+    height: 50vh;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto 48px;
@@ -39,19 +39,18 @@
   .carousel-box {
     position: relative;
     width: 90%; /* take most of the carousel width */
-    max-width: 700px; /* prevent it from getting too wide on large screens */
-    padding: 3rem 2rem; /* relative padding */
-    border-radius: 22px;
+    max-width: 800px; /* prevent it from getting too wide on large screens */
+    padding: 2rem 2rem; /* relative padding */
+    border-radius: 50px;
     background: #1e3a8a;
     color: #ffffff;
     text-align: center;
-    box-sizing: border-box; /* include padding in width */
     overflow-wrap: break-word; /* prevent long words from breaking layout */
   }
 
   /* Text */
   .carousel-box h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 800;
     margin-bottom: 14px;
     letter-spacing: -0.5px;
@@ -172,6 +171,18 @@
   
   @media (max-width: 768px) {
     
+    .carousel-box {
+      border-radius: 0px;
+    }
+    .carousel-box h3 {
+      font-size: 1.4rem;
+      
+    }
+  
+    .carousel-box p {
+      font-size: 1.1rem;
+      
+    }
   
     .mission-bottom {
       flex-direction: column;
@@ -191,8 +202,8 @@
   }
   
   @media (max-width: 480px) {
-    .carousel-box h3 { font-size: 1.5rem; }
-    .carousel-box p { font-size: 1rem; }
+    .carousel-box h3 { font-size: 1.1rem; }
+    .carousel-box p { font-size: 0.95rem; }
     .mission-text h4 { font-size: 1.3rem; }
     .mission-text p { font-size: 0.95rem; }
     .mission-image { width: 160px; }
