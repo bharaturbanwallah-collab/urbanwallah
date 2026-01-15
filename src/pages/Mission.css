@@ -166,6 +166,10 @@
   }
   
   @media (max-width: 768px) {
+    
+    .carousel-box{
+      min-height: 150px
+    }
     .mission-bottom {
       flex-direction: column;
     }
