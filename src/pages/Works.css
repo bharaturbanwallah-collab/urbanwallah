@@ -119,6 +119,10 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
+
+  .works-panel{
+    padding: 90px 0;
+  }
   .works-carousel-container {
     width: 90%;
     height: 68vh;
@@ -156,7 +160,7 @@
   .works-carousel-item::after {
     background-position: center bottom;
     background-size: cover;
-    opacity: 0.25;
+    opacity: 1.5;
   }
 
   .works-carousel-item::before {

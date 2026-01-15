@@ -119,6 +119,7 @@
   
     .vision-content p {
       margin: 0 auto;
+      gap:0px;
     }
   
     .vision-visual img {
@@ -131,6 +132,7 @@
     .vision-container {
       padding: 48px 20px;
       margin: 15% auto;
+      gap:0px;
 
     }
   

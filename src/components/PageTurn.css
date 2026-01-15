@@ -12,24 +12,36 @@
 .page {
   position: absolute;
   inset: 0;
-
   /* Match stage background perfectly */
   background-color: #0b1220;
   background-image:
     linear-gradient(
-      rgba(11, 18, 32, 0.832),
-      rgba(11, 18, 32, 0.819)
+      rgba(11, 18, 32, 0.714),
+      rgba(11, 18, 32, 0.444)
     ),
     url("/assets/loading.png");
 
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-
   backface-visibility: hidden;
   transform-style: preserve-3d;
+  animation: float 3s ease-in-out infinite;
+
 }
 
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 /* ===============================
    BACK PAGE (STATIC)
 ================================ */
