@@ -59,7 +59,7 @@ const Home = ({ onNavClick }) => {
             />
 
             <h1 className="hero-title">
-              A Reinvented Startup Ecosystem
+              Redefining Digital Excellence
             </h1>
 
             <p className="hero-sub">

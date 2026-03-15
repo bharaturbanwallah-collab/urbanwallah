@@ -68,8 +68,13 @@ const Contact = () => {
         <div className="info-block">
           <h4>📍 Address</h4>
           <p>
-            34/1, Kannampalayam, Sulur,<br />
-            Coimbatore, Tamil Nadu – 641402
+          K-Cube Hive
+          </p>
+          <p>
+          218, Sri Nagar, Villankurichi,
+          </p>
+          <p>
+          Coimbatore, Tamil Nadu – 641035
           </p>
         </div>
       </div>

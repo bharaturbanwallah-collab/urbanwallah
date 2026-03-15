@@ -1,30 +1,33 @@
-import { useEffect } from 'react'
-import './PageTurn.css'
+import { useEffect } from "react";
+import "./PageTurn.css";
 
 const PageTurn = ({ from, to, isActive, onComplete }) => {
   useEffect(() => {
-    if (!isActive) return
+    if (!isActive) return;
 
     const timer = setTimeout(() => {
-      onComplete()
-    }, 900)
+      onComplete();
+    }, 900);
 
-    return () => clearTimeout(timer)
-  }, [isActive, onComplete])
+    return () => clearTimeout(timer);
+  }, [isActive, onComplete]);
 
-  if (!isActive) return null
+  if (!isActive) return null;
 
   return (
     <div className="page-turn-stage">
-      {/* BACK PAGE (NEXT) */}
+
       <div className="page back">
+        <div className="loader"></div>
       </div>
-      {/* FRONT PAGE (CURRENT TURNING) */}
+
+      {/* FRONT PAGE */}
       <div className="page front turn">
         {from}
       </div>
-    </div>
-  )
-}
 
-export default PageTurn
+    </div>
+  );
+};
+
+export default PageTurn;
