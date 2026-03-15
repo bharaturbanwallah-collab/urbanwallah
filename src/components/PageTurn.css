@@ -1,3 +1,4 @@
+
 .page-turn-stage {
   position: fixed;
   inset: 0;
@@ -10,11 +11,9 @@
   position: absolute;
   inset: 0;
   background-color: transparent;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   backface-visibility: hidden;
   transform-style: preserve-3d;
 }
@@ -39,74 +38,44 @@
 }
 
 
-
 .loader {
-  width: 140px;
-  height: 140px;
+  width: 200px;
+  height: 200px;
   position: relative;
-
-  animation: loaderSpin 8s linear infinite;
 }
-
-
-.loader::before,
-.loader::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-}
-
 
 
 .loader::before {
-  background:
-    repeating-conic-gradient(
-      from 0deg,
-      #000000 0deg 8deg,
-      transparent 8deg 15deg
-    );
-
-  mask:
-    radial-gradient(
-      farthest-side,
-      transparent 70%,
-      black 71%
-    );
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/assets/loading.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: zoomFade 2.2s cubic-bezier(0.4,0,0.2,1) infinite;
 }
 
+@keyframes zoomFade {
 
+  0% {
+    transform: scale(0.9);
+    opacity: 0.45; 
+  }
 
-.loader::after {
-  background:
-    repeating-conic-gradient(
-      from 0deg,
-      rgba(0,0,0,0.8) 0deg 8deg,
-      transparent 8deg 15deg
-    );
+  40% {
+    transform: scale(1.25);
+    opacity: 1;
+  }
 
-  filter: blur(2px);
+  60% {
+    transform: scale(1.25);
+    opacity: 1; 
+  }
 
-  mask:
-    radial-gradient(
-      farthest-side,
-      transparent 70%,
-      black 71%
-    );
+  100% {
+    transform: scale(0.9);
+    opacity: 0.45;
+  }
 
-  animation: rotateLoader 3s steps(24) infinite;
-}
-
-
-
-@keyframes loaderSpin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-
-
-@keyframes rotateLoader {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }

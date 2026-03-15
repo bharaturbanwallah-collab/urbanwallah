@@ -21,7 +21,6 @@ const PageTurn = ({ from, to, isActive, onComplete }) => {
         <div className="loader"></div>
       </div>
 
-      {/* FRONT PAGE */}
       <div className="page front turn">
         {from}
       </div>
